@@ -25,5 +25,84 @@
       "/images/quarter-sawn-oak-writers-desk-7.jpg",
       "/images/quarter-sawn-oak-writers-desk-8.jpg"
     ]
+  },
+  {
+    "slug": "jersey-grain-company-wood-pail",
+    "title": "Jersey Grain Company Wood Pail",
+    "description": "An antique wood grain feed bucket with wrought iron handle and reinforced corners, embossed \"Jersey Grain Company\"",
+    "image": "/images/jersey-grain-company-wood-pail.jpg",
+    "images": [
+      "/images/jersey-grain-company-wood-pail-2.jpg",
+      "/images/jersey-grain-company-wood-pail-3.jpg",
+      "/images/jersey-grain-company-wood-pail-4.jpg",
+      "/images/jersey-grain-company-wood-pail-5.jpg"
+    ]
+  },
+  {
+    "slug": "globe-wernicke-barrister-bookcase-2",
+    "title": "Globe Wernicke barrister bookcase",
+    "description": "Walnut. 2 8 1/2\" and 2 10 1/4\" shelves. Not all glass is original.",
+    "image": "/images/globe-wernicke-barrister-bookcase-2.jpg",
+    "images": [
+      "/images/globe-wernicke-barrister-bookcase-2-2.jpg",
+      "/images/globe-wernicke-barrister-bookcase-2-3.jpg"
+    ]
+  },
+  {
+    "slug": "mid-century-walnut-lamp-with-spaghetti-resin-shade",
+    "title": "Mid-Century Walnut Lamp with Spaghetti Resin Shade",
+    "description": "Walnut base with an a spun \"spaghetti\" resin shade in swirling amber and cream tones",
+    "image": "/images/mid-century-walnut-lamp-with-spaghetti-resin-shade.jpg",
+    "images": [
+      "/images/mid-century-walnut-lamp-with-spaghetti-resin-shade-2.jpg",
+      "/images/mid-century-walnut-lamp-with-spaghetti-resin-shade-3.jpg",
+      "/images/mid-century-walnut-lamp-with-spaghetti-resin-shade-4.jpg",
+      "/images/mid-century-walnut-lamp-with-spaghetti-resin-shade-5.jpg",
+      "/images/mid-century-walnut-lamp-with-spaghetti-resin-shade-6.jpg"
+    ]
+  },
+  {
+    "slug": "jacobean-revival-oak-library-side-table",
+    "title": "Jacobean Revival oak library/side table",
+    "description": "Oak side table with barley-twist legs, lock and key, carved drawer pulls, and quarter-sawn construction. Likely early 1900s.",
+    "image": "/images/jacobean-revival-oak-library-side-table.png",
+    "images": [
+      "/images/jacobean-revival-oak-library-side-table-2.jpg",
+      "/images/jacobean-revival-oak-library-side-table-3.jpg"
+    ]
+  },
+  {
+    "slug": "victorian-oak-spindle-leg-lamp-table",
+    "title": "Victorian Oak Spindle-Leg Lamp Table",
+    "description": "Quarter-sawn oak top and turned tapering legs with a lower display shelf, likely 1890–1910.",
+    "image": "/images/victorian-oak-spindle-leg-lamp-table.jpg",
+    "images": [
+      "/images/victorian-oak-spindle-leg-lamp-table-2.jpg",
+      "/images/victorian-oak-spindle-leg-lamp-table-3.jpg",
+      "/images/victorian-oak-spindle-leg-lamp-table-4.jpg",
+      "/images/victorian-oak-spindle-leg-lamp-table-5.jpg",
+      "/images/victorian-oak-spindle-leg-lamp-table-6.jpg"
+    ]
+  },
+  {
+    "slug": "primitive-tool-chest-bench-set",
+    "title": "Primitive Tool Chest & Bench Set",
+    "description": "Old red-painted wooden tool chest with working hinges and hasp, displayed atop a rustic primitive bench. Sold together as a styled cabin storage set.",
+    "image": "/images/primitive-tool-chest-bench-set.png",
+    "images": [
+      "/images/primitive-tool-chest-bench-set-2.jpg",
+      "/images/primitive-tool-chest-bench-set-3.png",
+      "/images/primitive-tool-chest-bench-set-4.jpg"
+    ]
+  },
+  {
+    "slug": "farmhouse-extension-table-and-4-chairs",
+    "title": "Farmhouse Extension Table and 4 Chairs",
+    "description": "Table extends to seat >10, but we only have chairs for 4.",
+    "image": "/images/farmhouse-extension-table-and-4-chairs.jpg",
+    "images": [
+      "/images/farmhouse-extension-table-and-4-chairs-2.jpg",
+      "/images/farmhouse-extension-table-and-4-chairs-3.jpg"
+    ]
   }
 ]
