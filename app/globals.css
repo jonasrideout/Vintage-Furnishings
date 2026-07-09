@@ -7,8 +7,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background-color: #1c1815;
-  color: #f2ece2;
+  background-color: #faf9f6;
+  color: #161513;
   overscroll-behavior: none;
 }
 
@@ -16,19 +16,19 @@ body {
   box-sizing: border-box;
 }
 
-/* Liquid glass surface used for the back control and swipe arrows */
+/* Frosted glass surface used for floating controls, tuned for a light backdrop */
 .glass {
-  background: rgba(242, 236, 226, 0.08);
-  backdrop-filter: blur(18px) saturate(160%);
-  -webkit-backdrop-filter: blur(18px) saturate(160%);
-  border: 1px solid rgba(242, 236, 226, 0.16);
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  border: 1px solid rgba(22, 21, 19, 0.08);
   box-shadow:
-    0 8px 32px rgba(0, 0, 0, 0.35),
-    inset 0 1px 0 rgba(255, 255, 255, 0.12);
+    0 6px 20px rgba(22, 21, 19, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.6);
 }
 
 .glass:active {
-  background: rgba(242, 236, 226, 0.14);
+  background: rgba(255, 255, 255, 0.9);
   transform: scale(0.96);
 }
 
@@ -39,7 +39,7 @@ body {
 
 /* Subtle focus ring for keyboard users, kept visible per accessibility floor */
 :focus-visible {
-  outline: 2px solid #d4ab78;
+  outline: 2px solid #161513;
   outline-offset: 3px;
 }
 
