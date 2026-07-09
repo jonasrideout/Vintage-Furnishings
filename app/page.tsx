@@ -6,46 +6,36 @@ import { products } from "@/data/products";
 export default function CatalogPage() {
   return (
     <main className="min-h-screen px-5 py-10 sm:px-10 sm:py-16 lg:px-20">
-      <header className="mb-10 sm:mb-14">
-        <p className="font-mono text-xs tracking-[0.3em] text-brass uppercase mb-3">
-          Estate Collection
-        </p>
-        <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl text-ivory italic">
-          The Catalog
-        </h1>
-        <p className="mt-3 text-muted text-sm sm:text-base max-w-md">
-          {products.length} pieces. Tap any lot to view full size, then swipe
-          through the rest.
+      <header className="mb-12 sm:mb-16">
+        <p className="font-mono text-xs tracking-[0.3em] text-muted uppercase">
+          My pieces
         </p>
       </header>
 
       {products.length === 0 && (
         <p className="text-muted text-sm">
-          Nothing here yet — add pieces at{" "}
-          <code className="text-ivory">/admin</code> while running the site locally.
+          Nothing here yet — use the Catalog Builder tool to prep pieces, then
+          drag the exported files into this repo.
         </p>
       )}
 
-      <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
-        {products.map((product, index) => (
+      <ul>
+        {products.map((product) => (
           <li key={product.slug}>
             <Link
               href={`/product/${product.slug}`}
-              className="group block focus-visible:outline-2"
+              className="group flex items-center gap-6 py-6 sm:py-8 focus-visible:outline-2 rounded-md transition-colors hover:bg-black/[0.02]"
             >
-              <div className="relative aspect-[4/5] w-full overflow-hidden rounded-md bg-walnutdeep">
+              <div className="relative h-24 w-24 sm:h-28 sm:w-28 shrink-0 overflow-hidden rounded-md bg-panel">
                 <Image
                   src={product.image}
                   alt={product.title}
                   fill
-                  sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 22vw"
+                  sizes="112px"
                   className="object-cover transition-transform duration-300 group-hover:scale-[1.03]"
                 />
-                <span className="absolute top-2 left-2 font-mono text-[10px] tracking-widest text-ivory/90 bg-black/40 px-2 py-1 rounded">
-                  LOT {String(index + 1).padStart(2, "0")}
-                </span>
               </div>
-              <p className="mt-2 font-display text-ivory text-sm sm:text-base leading-snug">
+              <p className="font-display text-lg sm:text-xl text-ink leading-snug">
                 {product.title}
               </p>
             </Link>
