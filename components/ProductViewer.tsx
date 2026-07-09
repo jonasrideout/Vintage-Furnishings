@@ -175,10 +175,10 @@ export default function ProductViewer({
 
       {/* Title + description - bottom */}
       <div className="absolute bottom-6 left-0 right-0 z-10 px-6 text-center sm:bottom-8">
-        <h1 className="font-display text-2xl italic text-ink sm:text-3xl">
+        <h1 className="font-heading text-2xl text-ink sm:text-3xl">
           {product.title}
         </h1>
-        <p className="mx-auto mt-2 max-w-md text-sm text-muted sm:text-base">
+        <p className="mx-auto mt-2 max-w-md font-description font-light text-sm text-muted sm:text-base">
           {product.description}
         </p>
       </div>
