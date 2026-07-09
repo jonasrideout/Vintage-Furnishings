@@ -97,11 +97,11 @@ export default function ProductViewer({
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Stage: primary image + thumbnail strip, letterboxed to handle
-          mixed portrait/landscape gracefully. Thumbnails always sit in a
-          column on the right. Below the stage, small arrows step through
-          this piece's own photos one at a time. */}
-      <div className="absolute inset-0 flex flex-col items-center px-4 pb-40 pt-20 sm:px-10 sm:pb-44 sm:pt-24">
+      {/* Content column: image+thumbnails take whatever space is available,
+          then the arrows/title/description block sits directly under it at
+          its own natural height - so a short description doesn't leave a
+          gap, and a long one doesn't get clipped. */}
+      <div className="absolute inset-0 flex flex-col items-center px-4 pt-20 pb-6 sm:px-10 sm:pt-24 sm:pb-8">
         <div className="flex min-h-0 w-full max-w-5xl flex-1 flex-row items-stretch gap-4 sm:gap-6">
           <div className="relative min-h-0 min-w-0 flex-1">
             <Image
@@ -134,28 +134,43 @@ export default function ProductViewer({
           )}
         </div>
 
-        {hasThumbnails && (
-          <div className="mt-3 flex shrink-0 items-center gap-4 sm:mt-4">
+        {/* Photo-nav arrows flank the title/description. A hidden spacer of
+            the same width stands in for a missing arrow so the text stays
+            centered whether or not this piece has extra photos. */}
+        <div className="mt-4 grid w-full max-w-2xl shrink-0 grid-cols-[auto_1fr_auto] items-center gap-3 sm:mt-6 sm:gap-5">
+          {hasThumbnails ? (
             <button
               onClick={() => goToPhoto(-1)}
               aria-label="Previous photo of this piece"
-              className="glass flex h-9 w-9 items-center justify-center rounded-full text-ink"
+              className="glass flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-ink"
             >
               &larr;
             </button>
-            <span className="font-mono text-xs tracking-widest text-muted">
-              {String(activeIndex + 1).padStart(2, "0")} /{" "}
-              {String(allImages.length).padStart(2, "0")}
-            </span>
+          ) : (
+            <span className="h-9 w-9" aria-hidden="true" />
+          )}
+
+          <div className="px-1 text-center">
+            <h1 className="font-heading text-2xl text-ink sm:text-3xl">
+              {product.title}
+            </h1>
+            <p className="mx-auto mt-2 max-w-md font-description font-light text-sm text-muted sm:text-base">
+              {product.description}
+            </p>
+          </div>
+
+          {hasThumbnails ? (
             <button
               onClick={() => goToPhoto(1)}
               aria-label="Next photo of this piece"
-              className="glass flex h-9 w-9 items-center justify-center rounded-full text-ink"
+              className="glass flex h-9 w-9 shrink-0 items-center justify-center rounded-full text-ink"
             >
               &rarr;
             </button>
-          </div>
-        )}
+          ) : (
+            <span className="h-9 w-9" aria-hidden="true" />
+          )}
+        </div>
       </div>
 
       {/* Back to catalog - top left glass control */}
@@ -171,16 +186,6 @@ export default function ProductViewer({
       {/* Position in the catalog - top right */}
       <div className="glass absolute right-4 top-4 sm:right-6 sm:top-6 z-10 rounded-full px-4 py-2.5 font-mono text-xs tracking-widest text-ink">
         {String(lotNumber).padStart(2, "0")} / {String(totalLots).padStart(2, "0")}
-      </div>
-
-      {/* Title + description - bottom */}
-      <div className="absolute bottom-6 left-0 right-0 z-10 px-6 text-center sm:bottom-8">
-        <h1 className="font-heading text-2xl text-ink sm:text-3xl">
-          {product.title}
-        </h1>
-        <p className="mx-auto mt-2 max-w-md font-description font-light text-sm text-muted sm:text-base">
-          {product.description}
-        </p>
       </div>
 
       {/* Previous/next piece - fixed to the screen edges, desktop only.
