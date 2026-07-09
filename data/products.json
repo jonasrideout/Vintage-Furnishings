@@ -5,7 +5,6 @@
     "description": "Oak, 5 piece, nice condition.  Not all glass is original",
     "image": "/images/globe-wernicke-barrister-bookcase.png",
     "images": [
-      "/images/globe-wernicke-barrister-bookcase-2.jpg",
       "/images/globe-wernicke-barrister-bookcase-3.jpg",
       "/images/globe-wernicke-barrister-bookcase-4.jpg",
       "/images/globe-wernicke-barrister-bookcase-5.jpg"
@@ -45,6 +44,7 @@
     "image": "/images/globe-wernicke-barrister-bookcase-2.jpg",
     "images": [
       "/images/globe-wernicke-barrister-bookcase-2-2.jpg",
+      "/images/globe-wernicke-barrister-bookcase-2.jpg",
       "/images/globe-wernicke-barrister-bookcase-2-3.jpg"
     ]
   },
