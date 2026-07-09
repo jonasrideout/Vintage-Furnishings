@@ -106,11 +106,15 @@ export default function ProductViewer({
           image when the primary is portrait, below it when landscape. */}
       <div className="absolute inset-0 flex items-center justify-center px-4 pb-40 pt-20 sm:px-10 sm:pb-44 sm:pt-24">
         <div
-          className={`flex h-full w-full max-w-5xl ${
-            isPortrait ? "flex-row items-center gap-4 sm:gap-6" : "flex-col items-center gap-3 sm:gap-4"
+          className={`flex h-full w-full max-w-5xl items-stretch ${
+            isPortrait ? "flex-row gap-4 sm:gap-6" : "flex-col gap-3 sm:gap-4"
           }`}
         >
-          <div className="relative min-h-0 min-w-0 flex-1">
+          <div
+            className={`relative flex-1 ${
+              isPortrait ? "min-h-0 min-w-[45%]" : "min-h-[45%] min-w-0"
+            }`}
+          >
             <Image
               key={allImages[activeIndex]}
               src={allImages[activeIndex]}
@@ -126,8 +130,8 @@ export default function ProductViewer({
             <div
               className={
                 isPortrait
-                  ? "flex max-h-full flex-col gap-2 overflow-y-auto py-1 pr-1"
-                  : "flex max-w-full flex-row gap-2 overflow-x-auto px-1"
+                  ? "flex max-h-full shrink-0 flex-col gap-2 overflow-y-auto py-1 pr-1"
+                  : "flex max-w-full shrink-0 flex-row gap-2 overflow-x-auto px-1"
               }
             >
               {allImages.map((src, index) => (
