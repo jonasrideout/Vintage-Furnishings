@@ -37,7 +37,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
-      <body className="font-body bg-walnut min-h-screen bg-grain">{children}</body>
+      <body className="font-body bg-paper min-h-screen">{children}</body>
     </html>
   );
 }
