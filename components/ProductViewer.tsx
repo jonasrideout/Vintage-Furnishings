@@ -2,7 +2,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import type { Product } from "@/data/products";
 
@@ -27,6 +27,15 @@ export default function ProductViewer({
   const touchStartX = useRef<number | null>(null);
   const touchStartY = useRef<number | null>(null);
 
+  const allImages = [product.image, ...(product.images || [])];
+  const [activeIndex, setActiveIndex] = useState(0);
+  // Layout direction is decided by the declared primary photo's own
+  // orientation, not whichever thumbnail happens to be showing, so the
+  // layout doesn't jump around as you click between thumbnails.
+  const [primaryOrientation, setPrimaryOrientation] = useState<"portrait" | "landscape">(
+    "landscape"
+  );
+
   const goTo = useCallback(
     (slug: string) => {
       router.push(`/product/${slug}`);
@@ -37,6 +46,19 @@ export default function ProductViewer({
   const goBack = useCallback(() => {
     router.push("/");
   }, [router]);
+
+  // Reset to the primary photo whenever we land on a different product.
+  useEffect(() => {
+    setActiveIndex(0);
+  }, [product.slug]);
+
+  useEffect(() => {
+    const img = new window.Image();
+    img.onload = () => {
+      setPrimaryOrientation(img.naturalWidth >= img.naturalHeight ? "landscape" : "portrait");
+    };
+    img.src = product.image;
+  }, [product.image]);
 
   useEffect(() => {
     function handleKey(e: KeyboardEvent) {
@@ -70,24 +92,59 @@ export default function ProductViewer({
     touchStartY.current = null;
   }
 
+  const hasThumbnails = allImages.length > 1;
+  const isPortrait = primaryOrientation === "portrait";
+
   return (
     <main
       className="relative h-[100dvh] w-full overflow-hidden bg-walnut"
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* Primary image, letterboxed to handle mixed portrait/landscape gracefully */}
+      {/* Stage: primary image + thumbnail strip, letterboxed to handle
+          mixed portrait/landscape gracefully. Thumbnails sit beside the
+          image when the primary is portrait, below it when landscape. */}
       <div className="absolute inset-0 flex items-center justify-center px-4 pb-40 pt-20 sm:px-10 sm:pb-44 sm:pt-24">
-        <div className="relative h-full w-full">
-          <Image
-            key={product.slug}
-            src={product.image}
-            alt={product.title}
-            fill
-            priority
-            sizes="100vw"
-            className="object-contain"
-          />
+        <div
+          className={`flex h-full w-full max-w-5xl ${
+            isPortrait ? "flex-row items-center gap-4 sm:gap-6" : "flex-col items-center gap-3 sm:gap-4"
+          }`}
+        >
+          <div className="relative min-h-0 min-w-0 flex-1">
+            <Image
+              key={allImages[activeIndex]}
+              src={allImages[activeIndex]}
+              alt={product.title}
+              fill
+              priority={activeIndex === 0}
+              sizes="100vw"
+              className="object-contain"
+            />
+          </div>
+
+          {hasThumbnails && (
+            <div
+              className={
+                isPortrait
+                  ? "flex max-h-full flex-col gap-2 overflow-y-auto py-1 pr-1"
+                  : "flex max-w-full flex-row gap-2 overflow-x-auto px-1"
+              }
+            >
+              {allImages.map((src, index) => (
+                <button
+                  key={src}
+                  onClick={() => setActiveIndex(index)}
+                  aria-label={`View photo ${index + 1} of ${allImages.length}`}
+                  aria-current={index === activeIndex}
+                  className={`relative h-16 w-16 shrink-0 overflow-hidden rounded-md sm:h-20 sm:w-20 ${
+                    index === activeIndex ? "ring-2 ring-brass" : "opacity-60"
+                  }`}
+                >
+                  <Image src={src} alt="" fill sizes="80px" className="object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
       </div>
 
