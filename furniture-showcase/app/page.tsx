@@ -19,13 +19,6 @@ export default function CatalogPage() {
         </p>
       </header>
 
-      {products.length === 0 && (
-        <p className="text-muted text-sm">
-          Nothing here yet — add pieces at{" "}
-          <code className="text-ivory">/admin</code> while running the site locally.
-        </p>
-      )}
-
       <ul className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
         {products.map((product, index) => (
           <li key={product.slug}>
