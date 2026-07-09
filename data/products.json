@@ -103,5 +103,30 @@
       "/images/farmhouse-extension-table-and-4-chairs-2.jpg",
       "/images/farmhouse-extension-table-and-4-chairs-3.jpg"
     ]
+  },
+  {
+    "slug": "1936-westinghouse-ice-box",
+    "title": "1936 Westinghouse Ice Box",
+    "description": "Off-white enameled metal genuine 1936 Westinghouse ice box confirmed by the original \"Golden Jubilee\" emblem on the cabinet.  Original chrome latch hardware still intact and fully functional.",
+    "image": "/images/1936-westinghouse-ice-box.png",
+    "images": [
+      "/images/1936-westinghouse-ice-box-2.jpg",
+      "/images/1936-westinghouse-ice-box-3.jpg",
+      "/images/1936-westinghouse-ice-box-4.jpg",
+      "/images/1936-westinghouse-ice-box-5.jpg"
+    ]
+  },
+  {
+    "slug": "woodard-style-wrought-iron-patio-table-4-chairs",
+    "title": "Woodard-Style Wrought Iron Patio Table & 4 Chairs",
+    "description": "Beautiful mid-century wrought iron patio set with a glass-top table, an ornate scrolled spider-leg base, plus 4 matching chairs with rose-and-leaf detailing.  Cushions need cleaned or replaced.",
+    "image": "/images/woodard-style-wrought-iron-patio-table-4-chairs.jpg",
+    "images": [
+      "/images/woodard-style-wrought-iron-patio-table-4-chairs-2.jpg",
+      "/images/woodard-style-wrought-iron-patio-table-4-chairs-3.jpg",
+      "/images/woodard-style-wrought-iron-patio-table-4-chairs-4.jpg",
+      "/images/woodard-style-wrought-iron-patio-table-4-chairs-5.jpg",
+      "/images/woodard-style-wrought-iron-patio-table-4-chairs-6.jpg"
+    ]
   }
 ]
