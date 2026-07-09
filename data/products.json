@@ -2,12 +2,22 @@
   {
     "slug": "globe-wernicke-barrister-bookcase",
     "title": "Globe Wernicke barrister bookcase",
-    "description": "Oak, 5 piece, nice condition.  Not all glass is original",
+    "description": "Oak, 5 shelves, nice condition.  Not all glass is original",
     "image": "/images/globe-wernicke-barrister-bookcase.png",
     "images": [
       "/images/globe-wernicke-barrister-bookcase-3.jpg",
       "/images/globe-wernicke-barrister-bookcase-4.jpg",
       "/images/globe-wernicke-barrister-bookcase-5.jpg"
+    ]
+  },
+  {
+    "slug": "globe-wernicke-barrister-bookcase-2",
+    "title": "Globe Wernicke barrister bookcase",
+    "description": "Walnut, 4 shelves, nice condition. Not all glass is original.",
+    "image": "/images/globe-wernicke-barrister-bookcase-2.jpg",
+    "images": [
+      "/images/globe-wernicke-barrister-bookcase-2-2.jpg",
+      "/images/globe-wernicke-barrister-bookcase-2-3.jpg"
     ]
   },
   {
@@ -35,17 +45,6 @@
       "/images/jersey-grain-company-wood-pail-3.jpg",
       "/images/jersey-grain-company-wood-pail-4.jpg",
       "/images/jersey-grain-company-wood-pail-5.jpg"
-    ]
-  },
-  {
-    "slug": "globe-wernicke-barrister-bookcase-2",
-    "title": "Globe Wernicke barrister bookcase",
-    "description": "Walnut. 2 8 1/2\" and 2 10 1/4\" shelves. Not all glass is original.",
-    "image": "/images/globe-wernicke-barrister-bookcase-2.jpg",
-    "images": [
-      "/images/globe-wernicke-barrister-bookcase-2-2.jpg",
-      "/images/globe-wernicke-barrister-bookcase-2.jpg",
-      "/images/globe-wernicke-barrister-bookcase-2-3.jpg"
     ]
   },
   {
