@@ -1,1 +1,29 @@
-[]
+[
+  {
+    "slug": "globe-wernicke-barrister-bookcase",
+    "title": "Globe Wernicke barrister bookcase",
+    "description": "Oak, 5 piece, nice condition.  Not all glass is original",
+    "image": "/images/globe-wernicke-barrister-bookcase.png",
+    "images": [
+      "/images/globe-wernicke-barrister-bookcase-2.jpg",
+      "/images/globe-wernicke-barrister-bookcase-3.jpg",
+      "/images/globe-wernicke-barrister-bookcase-4.jpg",
+      "/images/globe-wernicke-barrister-bookcase-5.jpg"
+    ]
+  },
+  {
+    "slug": "quarter-sawn-oak-writers-desk",
+    "title": "Quarter-Sawn Oak Writer's Desk",
+    "description": "A substantial quarter-sawn oak set featuring a desk with manuscript drawers and brass-labeled file drawers, paired with a matching swivel armchair. The chair bears a \"Property, City of Houston\" tag",
+    "image": "/images/quarter-sawn-oak-writers-desk.jpg",
+    "images": [
+      "/images/quarter-sawn-oak-writers-desk-2.jpg",
+      "/images/quarter-sawn-oak-writers-desk-3.jpg",
+      "/images/quarter-sawn-oak-writers-desk-4.jpg",
+      "/images/quarter-sawn-oak-writers-desk-5.jpg",
+      "/images/quarter-sawn-oak-writers-desk-6.jpg",
+      "/images/quarter-sawn-oak-writers-desk-7.jpg",
+      "/images/quarter-sawn-oak-writers-desk-8.jpg"
+    ]
+  }
+]
