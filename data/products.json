@@ -128,5 +128,18 @@
       "/images/woodard-style-wrought-iron-patio-table-4-chairs-5.jpg",
       "/images/woodard-style-wrought-iron-patio-table-4-chairs-6.jpg"
     ]
+  },
+  {
+    "slug": "primitive-painted-wall-cabinet",
+    "title": "Primitive Painted Wall Cabinet",
+    "description": "Small board-and-batten wall cabinet in worn sage-green paint with heavy age and crackling. Forged metal door latch; open interior with a single fixed shelf.",
+    "image": "/images/primitive-painted-wall-cabinet.jpg",
+    "images": [
+      "/images/primitive-painted-wall-cabinet-2.jpg",
+      "/images/primitive-painted-wall-cabinet-3.jpg",
+      "/images/primitive-painted-wall-cabinet-4.jpg",
+      "/images/primitive-painted-wall-cabinet-5.jpg",
+      "/images/primitive-painted-wall-cabinet-6.jpg"
+    ]
   }
 ]
